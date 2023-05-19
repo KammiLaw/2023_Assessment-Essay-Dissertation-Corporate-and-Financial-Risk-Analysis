@@ -1,6 +1,6 @@
 clear all; close all;
 
-returns = readmatrix('20AssetsLinR.csv', 'Range', 'X4:AQ253'); % Modify the file name and path accordingly
+returns = readmatrix('20AssetsLinR.csv', 'Range', 'X4:AQ253');
 
 % Define the objective function (VaR function)
 fun = @(x) -GetVar(AssetsPortRet(x), 0.05, -1); % Negative sign for maximizing the return
